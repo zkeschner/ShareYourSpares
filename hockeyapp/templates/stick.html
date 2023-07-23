@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sticks Available
+{% endblock %}
+
+{% block main %}
+
+
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th> Brand </th>
+                <th> Size</th>
+                <th> Flex </th>
+                <th> Curve </th>
+                <th> Hand</th>
+                <th> Model </th>
+                <th> Reserve</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in table %}
+                <tr>
+                    <td> {{ row[1] }} </td>
+                    <td> {{ row[2] }} </td>
+                    <td> {{ row[3] }} </td>
+                    <td> {{ row[4] }} </td>
+                    <td> {{ row[5] }} </td>
+                    <td> {{ row[6] }} </td>
+                    <td> 
+                    <form action="/stick" method="post">
+                        <button class="btn btn-primary" type="submit" name="check" value={{row[7]}}>Reserve</button>
+                    </form>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

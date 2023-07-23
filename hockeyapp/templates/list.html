@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    List Sticks
+{% endblock %}
+
+{% block main %}
+
+<form action="/list" method="post">
+    <div class="mb-3">
+        <input  class="form-control mx-auto w-auto" id="brand" name="brand" placeholder="Brand" type="text">
+    </div>
+    <div class="mb-3">
+        <input class="form-control mx-auto w-auto" id="size" name="size" placeholder="Size" type="text">
+    </div>
+    <div class="mb-3">
+        <input class="form-control mx-auto w-auto" id="curve" name="curve" placeholder="Curve" type="text">
+    </div>
+    <div class="mb-3">
+        <input  class="form-control mx-auto w-auto" id="model" name="model" placeholder="Model" type="text">
+    </div>
+    <div class="mb-3">
+        <input class="form-control mx-auto w-auto" id="flex" name="flex" placeholder="Flex" type="number">
+    </div>
+    <div class="mb-3">
+        <input class="form-control mx-auto w-auto" id="hand" name="hand" placeholder="Hand" type="text">
+    </div>
+    <div class="mb-3">
+        <input  class="form-control mx-auto w-auto" id="address" name="address" placeholder="Address" type="text">
+    </div>
+    <button class="btn btn-primary" type="submit">Submit</button>
+</form>
+
+
+{% endblock %}
